@@ -8,17 +8,14 @@ async function getApi(){
     let data = response.docs
     
     for(let i=0; i<data.length; i++){
-        getData(data[i])    }
+        let autor = {
+            autor: data[i].author_name[0],
+            libro : data[i].title
+        }
+        
+        libreria.push(autor)
+    }
 }
 getApi()
 
-function getData(data){
-    let autor = {
-        autor: data.author_name[0],
-        libro : data.title
-    }
-
-    libreria.push(autor)
-}
-
-console.log(libreria)
+console.log(libreria[0])
