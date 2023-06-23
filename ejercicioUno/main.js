@@ -4,7 +4,7 @@ async function getApi(){
      let request = await fetch("https://pokeapi.co/api/v2/pokemon/")
      let response = await request.json()
      let data = response.results
-    for (let i = 0; i<= data.length; i++){
+    for (let i = 0; i< data.length; i++){
 
         let request = await fetch (data[i].url)
         let response = await request.json()
