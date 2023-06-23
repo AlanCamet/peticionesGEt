@@ -18,4 +18,5 @@ async function getApi(){
 }
 getApi()
 
+console.log(libreria)
 console.log(libreria[0])
